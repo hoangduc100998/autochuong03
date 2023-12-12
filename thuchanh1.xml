@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Maven_Page_Object_Model" verbose="1">
+<!--    <test thread-count="5" name="FirefoxTest">-->
+<!--        <parameter name="browser" value="firefox"></parameter>-->
+<!--        <parameter name="appURL" value="https://rise.fairsketch.com"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="THClients.Tcs.Access">-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<test thread-count="5" name="ChromeTest">
+    <parameter name="browserType" value="chrome"></parameter>
+    <parameter name="appURL" value="https://rise.fairsketch.com"></parameter>
+    <classes>
+        <class name="AutomationWebFramework.ThucHanh1.testcases.TC01_Config">
+        </class>
+    </classes>
+</test>
+</suite>
