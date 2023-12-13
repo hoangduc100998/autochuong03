@@ -12,7 +12,7 @@
     <parameter name="browserType" value="chrome"></parameter>
     <parameter name="appURL" value="https://rise.fairsketch.com"></parameter>
     <classes>
-        <class name="AutomationWebFramework.ThucHanh1.testcases.TC01_Config">
+        <class name="AutomationWebFramework.ThucHanh1.testcases.TC02_ReadFromExcel">
         </class>
     </classes>
 </test>
