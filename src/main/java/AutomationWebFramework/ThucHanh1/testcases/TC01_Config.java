@@ -35,12 +35,12 @@ public class TC01_Config extends BaseTest {
         HomePageObjects.Home(driver);
     }
     @Test (priority = 2)
-    public void Test_Client()  {
-        ClientPageObjects.Client(driver);
+    public void Test_Client() throws InterruptedException {
+        ClientPageObjects.getTotalClientOverview(driver);
     }
     @Test (priority = 3)
-    public void Test_ClientDetail()  {
-        ClientDetailPageObjects.Detail(driver);
+    public void Test_ClientDetail() throws InterruptedException {
+        ClientDetailPageObjects.getTotalClientOnList(driver);
     }
 
     @AfterClass

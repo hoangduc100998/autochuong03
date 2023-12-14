@@ -11,7 +11,8 @@ public class HomePageObjects {
     static BasePage basePage=new BasePage();
     private static WebDriverWait wait;
     public static void Home (WebDriver driver){
-        basePage.isElementDisplayed(driver, HomePageUI.text_dashboard);
+
+        basePage.isElementDisplayed(driver, HomePageUI.menu_client);
         basePage.clickToElement(driver, HomePageUI.menu_client);
     }
 }

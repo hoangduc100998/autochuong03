@@ -15,6 +15,9 @@ public class ClientPageUI {
     public static String total_Clients =
             "//div[@class='widget-details']/h1[following-sibling::span[text()='Total clients']]";
 
+    //cach2
+    //span[text()='Total clients']/parent::div/h1
+
     //Chọn để kích qua tab Clients
     public static String Clients = "//a[text()='Clients']";
 

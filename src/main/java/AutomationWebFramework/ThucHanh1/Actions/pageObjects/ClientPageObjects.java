@@ -11,14 +11,18 @@ public class ClientPageObjects {
     private static WebElement element = null;
     static BasePage basePage=new BasePage();
     private static WebDriverWait wait;
-    public static void Client(WebDriver driver)  {
-        basePage.getElementText(driver, total_Clients);
+    public static String getTotalClientOverview (WebDriver driver) throws InterruptedException {
+
+        //Ham đợi không dùng thread nữa
+        basePage.waitForElementVisible(driver, total_Clients);
+
+        //basePage.getElementText(driver, total_Clients);
         String totalClientsText = basePage.getElementText(driver, total_Clients);
-        System.out.println("Total Clients Overview: " + totalClientsText);
+        //System.out.println("Total Clients Overview: " + totalClientsText);
+
+        return totalClientsText;
 
         //Chuyển sang tab Clients
-        basePage.clickToElement(driver, ClientPageUI.Clients);
-
-
+        //basePage.clickToElement(driver, ClientPageUI.Clients);
     }
 }

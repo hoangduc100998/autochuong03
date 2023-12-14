@@ -8,15 +8,18 @@ import AutomationWebFramework.ThucHanh1.Actions.pageObjects.LoginPageObjects;
 //import AutomationWebFramework.ThucHanh1.Actions.pageObjects.ClientPage;
 //import AutomationWebFramework.ThucHanh1.Actions.pageObjects.ClientDetailPage;
 import AutomationWebFramework.ThucHanh1.Utilities.Helpers.ExcelHelpers;
+import AutomationWebFramework.ThucHanh1.Utilities.Listeners.ReportListener;
 import AutomationWebFramework.ThucHanh1.Utilities.Listeners.TestListener;
 import AutomationWebFramework.ThucHanh1.Actions.pageObjects.HomePageObjects;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import org.testng.asserts.Assertion;
 
-@Listeners(TestListener.class)
+@Listeners(ReportListener.class)
 public class TC01_ReadFromExcel extends BaseTest {
     private WebDriver driver;
     @BeforeClass
@@ -36,12 +39,11 @@ public class TC01_ReadFromExcel extends BaseTest {
         HomePageObjects.Home(driver);
     }
     @Test (priority = 2)
-    public void Test_Client()  {
-        ClientPageObjects.Client(driver);
-    }
-    @Test (priority = 3)
-    public void Test_ClientDetail()  {
-        ClientDetailPageObjects.Detail(driver);
+    public void Test_Client() throws InterruptedException {
+       String totalClient = ClientPageObjects.getTotalClientOverview(driver);
+       String totalClientOnList = ClientDetailPageObjects.getTotalClientOnList(driver);
+        Assert.assertEquals(totalClient, totalClientOnList);
+
     }
     @AfterClass
     public void afterTest() throws Exception {
