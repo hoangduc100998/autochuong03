@@ -23,5 +23,4 @@ public class TaskPageUI {
     public static String excel = "//span[normalize-space()='Excel']";
     public static String print = "//span[normalize-space()='Print']";
     public static String search = "//input[@type='search']";
-
 }
