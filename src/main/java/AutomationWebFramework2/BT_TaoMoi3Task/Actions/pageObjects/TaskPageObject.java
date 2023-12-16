@@ -1,9 +1,9 @@
 package AutomationWebFramework2.BT_TaoMoi3Task.Actions.pageObjects;
 
 import AutomationWebFramework2.BT_TaoMoi3Task.Actions.commons.BasePage;
+import AutomationWebFramework2.BT_TaoMoi3Task.Interfaces.TaskPageUI;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import AutomationWebFramework2.BT_TaoMoi3Task.Interfaces.TaskPageUI;
 
 public class TaskPageObject {
     private static WebElement element = null;
