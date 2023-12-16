@@ -42,9 +42,13 @@ public class TC01_ReadFromExcel extends BaseTest {
     public void Test_Client() throws InterruptedException {
        String totalClient = ClientPageObjects.getTotalClientOverview(driver);
        String totalClientOnList = ClientDetailPageObjects.getTotalClientOnList(driver);
+       //so sánh totalClient với totalClientOnList coi có giống nhau không
         Assert.assertEquals(totalClient, totalClientOnList);
-
     }
+    @Test (priority = 3)
+    public void writeIntoExcel() throws Exception {
+    }
+
     @AfterClass
     public void afterTest() throws Exception {
         tearDown();
